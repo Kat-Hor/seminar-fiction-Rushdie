@@ -1,0 +1,107 @@
+/* Shared styles for the seminar pages
+   "Born at Midnight, Born in Shame" – Prof. Dr. Stefan Horlacher, TU Dresden */
+
+:root {
+  --midnight: #1b1f5e;
+  --midnight-deep: #12143f;
+  --rani: #c2185b;
+  --rani-bright: #ec3f86;
+  --marigold: #f5a300;
+  --peacock: #00797a;
+  --peacock-bright: #19b5a5;
+  --paper: #fbf9ff;
+  --wash: #f0edfb;
+  --ink: #1a1838;
+  --ink-soft: #4d4a6b;
+  --line: #d9d4ee;
+  --accent: var(--rani);
+  --display: "Rozha One", "Noto Serif Devanagari", Georgia, serif;
+  --body: "Mukta", "Noto Sans Devanagari", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; }
+
+a { color: var(--rani); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { color: var(--midnight); text-decoration-thickness: 2px; }
+
+:focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; border-radius: 4px; }
+
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.12; margin: 0; }
+
+.wrap { width: min(100% - 2rem, 72rem); margin-inline: auto; }
+
+.skip {
+  position: absolute; left: -999px; top: 0;
+  background: var(--marigold); color: var(--ink); padding: 0.5rem 1rem; z-index: 10;
+}
+.skip:focus { left: 0; }
+
+/* Thin tricolour band used at the very top and above the footer */
+.band {
+  height: 8px;
+  background: linear-gradient(90deg,
+    var(--marigold) 0 25%, var(--rani-bright) 25% 50%,
+    var(--peacock-bright) 50% 75%, #7c5cff 75% 100%);
+}
+
+/* ---------- Hero (midnight) ---------- */
+.hero {
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(236, 63, 134, 0.35), transparent 60%),
+    radial-gradient(40rem 26rem at 0% 110%, rgba(25, 181, 165, 0.28), transparent 60%),
+    var(--midnight);
+  color: #fff;
+  overflow: hidden;
+}
+.hero a { color: #fff; }
+
+.topline {
+  display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem;
+  justify-content: space-between; align-items: baseline;
+  padding: 1.1rem 0; font-size: 1rem; color: #d7d3f5;
+}
+.topline a { text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+.topline a:hover { color: var(--marigold); border-color: var(--marigold); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--midnight-deep); color: #d7d3f5; margin-top: 5rem; }
+.site-footer .inner {
+  display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center;
+  padding: 2.5rem 0 2.75rem;
+}
+.site-footer .who { font-family: var(--display); font-size: 1.6rem; color: #fff; line-height: 1.2; }
+.site-footer p { margin: 0.35rem 0 0; }
+.site-footer .term { color: var(--marigold); }
+.site-footer .seminar { font-size: 1rem; max-width: 46ch; color: #b9b4e0; margin-top: 0.9rem; }
+.logo-slot {
+  background: #fff; border-radius: 10px; padding: 0.9rem 1.2rem;
+  display: flex; align-items: center; min-height: 4.5rem;
+}
+.logo-slot img { display: block; height: 4.25rem; width: auto; }
+.logo-slot .fallback { color: #00305d; font-weight: 700; font-size: 1.15rem; line-height: 1.15; }
+.logo-slot img + .fallback { display: none; }
+
+@media (max-width: 40rem) {
+  .site-footer .inner { grid-template-columns: 1fr; }
+  .logo-slot { justify-self: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
