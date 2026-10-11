@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pakistan – Born at Midnight, Born in Shame</title>
+<meta name="description" content="Background material on Pakistan, Zulfikar Ali Bhutto, Zia-ul-Haq and Benazir Bhutto for the Hauptseminar on Salman Rushdie's fiction, Prof. Dr. Stefan Horlacher, TU Dresden.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&family=Rozha+One&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=5">
+<style>
+  .hero-india { display: grid; grid-template-columns: 1fr auto; gap: 1rem 3rem; align-items: end; padding: 2rem 0 3.5rem; }
+  .hero-india h1 { font-size: clamp(3.5rem, 9vw, 7rem); }
+  .hero-india .deva { font-family: var(--display); font-size: clamp(5rem, 17vw, 13rem); line-height: 0.95; color: var(--marigold); }
+  .hero-india .intro { font-size: 1.25rem; max-width: 40ch; margin: 1rem 0 0; color: #ebe8ff; }
+  .motto { border-top: 1px solid rgba(255,255,255,0.2); padding: 1.1rem 0 1.4rem; color: #d7d3f5; font-size: 1rem; }
+  .motto .s { font-family: var(--display); font-size: 1.6rem; color: #fff; margin-right: 0.6rem; }
+
+  .layout { display: grid; grid-template-columns: 14rem minmax(0, 46rem); gap: 3.5rem; padding-top: 3rem; align-items: start; scroll-margin-top: 0.5rem; }
+
+  /* Tabs */
+  .tabs { position: sticky; top: 1.25rem; font-size: 1.05rem; }
+  .tabs ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+  .tabs a {
+    display: block; padding: 0.5rem 1rem; border-radius: 12px 12px 12px 3px;
+    color: var(--ink); text-decoration: none; background: var(--wash);
+    border-left: 6px solid var(--c, var(--rani)); transition: background 0.15s, color 0.15s;
+  }
+  .tabs a:hover { background: #e3defa; }
+  .tabs a[aria-current="true"] { background: var(--midnight); color: #fff; font-weight: 700; }
+
+  main { min-height: 32rem; }
+  section { padding-bottom: 2.5rem; scroll-margin-top: 1.5rem; }
+  .tabbed main > section { display: none; }
+  .tabbed main > section.active { display: block; animation: panel 0.35s ease-out; }
+  @keyframes panel { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  section > header { margin-bottom: 1.5rem; }
+  section h2 { font-size: clamp(2rem, 4.2vw, 2.9rem); }
+  section h3 { font-size: 1.6rem; margin: 2.25rem 0 0.75rem; }
+
+  /* Sanskrit / Hindi keyword that belongs to each section */
+  .word { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.75rem; margin: 0.5rem 0 0; color: var(--ink-soft); font-size: 1rem; }
+  .word .s { font-family: var(--display); font-size: 1.75rem; line-height: 1.3; color: var(--accent); }
+  .word .bn { font-family: "Noto Serif Bengali", var(--display); font-weight: 600; }
+
+  .lead-in { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
+
+  .points { list-style: none; margin: 0; padding: 0; }
+  .points > li { position: relative; padding-left: 1.6rem; margin-bottom: 1rem; }
+  .points > li::before {
+    content: ""; position: absolute; left: 0; top: 0.62em; width: 0.6rem; height: 0.6rem;
+    background: var(--accent); border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+  }
+
+  blockquote { margin: 1.5rem 0; padding: 0 0 0 1.5rem; border-left: 6px solid var(--marigold); font-family: var(--display); font-size: 1.7rem; line-height: 1.25; }
+  blockquote footer { font-family: var(--body); font-size: 1rem; color: var(--ink-soft); margin-top: 0.5rem; }
+
+  .note { border-radius: 14px; padding: 0.9rem 1.2rem; margin: 1.25rem 0; font-size: 1rem; line-height: 1.55; }
+  .note b { display: block; }
+  .note.update { background: #fff4d6; }
+  .note.update b { color: #7a5200; }
+  .note.novel { background: var(--midnight); color: #ebe8ff; }
+  .note.novel b { color: var(--marigold); }
+
+  /* Timeline */
+  .timeline { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--midnight); }
+  .timeline li { position: relative; display: grid; grid-template-columns: 8.5rem 1fr; gap: 1rem; padding: 0 0 1.4rem 1.5rem; align-items: baseline; }
+  .timeline li::before { content: ""; position: absolute; left: -9px; top: 0.55rem; width: 15px; height: 15px; border-radius: 50%; background: var(--c, var(--rani)); border: 3px solid var(--paper); }
+  .timeline .y { font-family: var(--display); font-size: 1.45rem; line-height: 1.2; color: var(--midnight); }
+
+  /* Links */
+  .links { list-style: none; margin: 0; padding: 0; }
+  .links li { padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+  .links a { font-weight: 700; }
+  .links span { display: block; color: var(--ink-soft); font-size: 1rem; }
+
+  /* Quiz */
+  #quiz-body { background: var(--wash); border-radius: 28px 28px 28px 4px; padding: 2rem 2rem 2.25rem; }
+  .q { border: 0; margin: 0 0 2rem; padding: 0; }
+  .q legend { font-weight: 700; font-size: 1.2rem; line-height: 1.4; padding: 0; margin-bottom: 0.75rem; }
+  .q legend .num { color: var(--peacock); }
+  .opts { display: grid; gap: 0.5rem; }
+  .opts button {
+    font: inherit; text-align: left; cursor: pointer; color: var(--ink);
+    background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 0.6rem 1rem;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .opts button:hover:not(:disabled) { border-color: var(--midnight); }
+  .opts button:disabled { cursor: default; color: var(--ink-soft); }
+  .opts button.right { background: #d9f5ee; border-color: var(--peacock); color: var(--ink); font-weight: 700; }
+  .opts button.wrong { background: #ffe0ec; border-color: var(--rani); color: var(--ink); }
+  .opts button.right::after { content: "  ✓"; }
+  .opts button.wrong::after { content: "  ✗"; }
+  .why { margin: 0.75rem 0 0; font-size: 1rem; }
+  .result { background: var(--midnight); color: #fff; border-radius: 16px; padding: 1.5rem; }
+  .result .score { font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--marigold); }
+  .result p { margin: 0.5rem 0 1rem; }
+  .result button { font: inherit; font-weight: 700; cursor: pointer; border: 0; border-radius: 999px; padding: 0.55rem 1.3rem; background: #fff; color: var(--midnight); }
+  .progress { position: sticky; bottom: 0.75rem; margin-top: 1rem; display: inline-block; background: var(--midnight); color: #fff; border-radius: 999px; padding: 0.3rem 1rem; font-size: 1rem; }
+
+  /* Previous / next at the foot of each tab */
+  .pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+  .pager button {
+    font: inherit; cursor: pointer; border: 2px solid var(--midnight); border-radius: 999px;
+    padding: 0.45rem 1.2rem; background: none; color: var(--midnight); font-weight: 700;
+  }
+  .pager button.next { background: var(--midnight); color: #fff; margin-left: auto; }
+  .pager button:hover { background: var(--rani); border-color: var(--rani); color: #fff; }
+
+  .home { margin: 0.5rem 0 0; }
+  .home a {
+    display: inline-block; text-decoration: none; font-weight: 700; color: #fff;
+    background: var(--rani); border-radius: 999px; padding: 0.55rem 1.4rem;
+  }
+  .home a::before { content: "‹ "; }
+  .home a:hover { background: var(--midnight); color: #fff; }
+
+  /* Urdu in Nastaliq script */
+  .ur { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-weight: 400; }
+  .word .s.ur { font-size: 1.45rem; line-height: 2.3; }
+  .motto .s.ur { font-size: 1.35rem; line-height: 2.2; }
+  .hero-india .ur-hero { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(3.5rem, 11vw, 8rem); line-height: 1.9; color: var(--peacock-bright); }
+
+  @media (max-width: 60rem) {
+    .layout { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding-top: 0; }
+    .tabs { position: sticky; top: 0; z-index: 5; background: var(--paper); margin-inline: -1rem; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); }
+    .tabs ol { display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.2rem; }
+    .tabs a { white-space: nowrap; border-left-width: 0; border-bottom: 4px solid var(--c, var(--rani)); border-radius: 10px; padding: 0.3rem 0.85rem; }
+    section, .layout { scroll-margin-top: 4.25rem; }
+  }
+  @media (max-width: 40rem) {
+    .hero-india { grid-template-columns: 1fr; }
+    .timeline li { grid-template-columns: 1fr; gap: 0; }
+    #quiz-body { padding: 1.5rem 1.1rem 2rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="band"></div>
+
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topline">
+      <a href="index.html">Born at Midnight, Born in Shame: all topics</a>
+      <span>Background material</span>
+    </div>
+    <div class="hero-india">
+      <div>
+        <h1>Pakistan</h1>
+        <p class="intro">The founding of the state in 1947, and the three figures behind Rushdie’s <i>Shame</i>: Zulfikar Ali Bhutto, Zia-ul-Haq and Benazir Bhutto.</p>
+      </div>
+      <div class="deva ur-hero" lang="ur" dir="rtl" aria-hidden="true">پاکستان</div>
+    </div>
+    <div class="motto">
+      <span class="s ur" lang="ur" dir="rtl">ایمان، اتحاد، تنظیم</span>
+      <i>īmān, ittiḥād, tanẓīm</i>, “Faith, Unity, Discipline”: Pakistan’s national motto, in Urdu
+    </div>
+  </div>
+</header>
+
+<div class="wrap layout" id="top">
+  <nav class="tabs" aria-label="Sections of this page">
+    <ol>
+      <li><a href="#founding" style="--c: var(--peacock)">The founding of Pakistan</a></li>
+      <li><a href="#zab" style="--c: var(--rani)">Zulfikar Ali Bhutto</a></li>
+      <li><a href="#zia" style="--c: var(--violet)">Zia-ul-Haq</a></li>
+      <li><a href="#benazir" style="--c: var(--amber)">Benazir Bhutto</a></li>
+      <li><a href="#timeline" style="--c: var(--peacock)">Timeline</a></li>
+      <li><a href="#links" style="--c: var(--amber)">Further links</a></li>
+      <li><a href="#quiz" style="--c: var(--marigold)">Quiz</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+
+    <section id="founding" style="--accent: var(--peacock)">
+      <header>
+        <h2>The founding of Pakistan</h2>
+        <p class="word"><span class="s ur" lang="ur" dir="rtl">پاک</span> <span><i>pāk</i>, Urdu for “pure”: Pakistan is often rendered as “land of the pure”</span></p>
+      </header>
+      <p class="lead-in">Pakistan was brought into being at the time of the Partition of British India in 1947 in order to create a separate homeland for India’s Muslims, in response to the demands of Islamic nationalists articulated by the All India Muslim League under the leadership of Mohammed Ali Jinnah.</p>
+
+      <p class="flip-hint">Click a card to turn it over.</p>
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--peacock)"><span class="inner">
+          <span class="face front"><span class="big">Mohammed Ali Jinnah</span><span class="small">leader of the Muslim League</span></span>
+          <span class="face back"><span class="txt">As eager as any Hindu nationalist to end British rule, he concluded that only a separate Muslim state could preserve India’s Muslims from complete subordination to the Hindu majority. Without his cooperation, of which the price was Pakistan, Indian independence was impracticable.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="num">1940</span><span class="small">the demand</span></span>
+          <span class="face back"><span class="txt">By 1940 the demand for Pakistan had been formally endorsed by the Muslim League under Jinnah’s leadership.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="num">1,000</span><span class="small">miles apart</span></span>
+          <span class="face back"><span class="txt">From 1947 until 1971 Pakistan consisted of two regions, West Pakistan and East Pakistan, located more than 1,000 miles away in the Ganges River delta. In 1971 East Pakistan became independent as Bangladesh.</span></span>
+        </span></button>
+      </div>
+
+      <ul class="points">
+        <li>The gradual clarification of the British intention to grant self-government to India along the lines of British parliamentary democracy aroused Muslim apprehensions regarding ultimate political subjection to the Hindu majority.</li>
+        <li>British policy, supported by the weight of the Hindu nationalist movement, laboured hard to avoid disrupting the economic and political unity built up during British rule. None of the suggested alternatives to the separation of Pakistan commended themselves to Jinnah. His courage and implacable determination triumphed in the end.</li>
+      </ul>
+
+      <details class="acc">
+        <summary>A state that seemed unlikely to survive</summary>
+        <div class="body">
+          <ul class="points">
+            <li>With the major portion of the wealth and resources of the British heritage passing to India, Pakistan’s survival seemed to hang in the balance. Of all the well-organized provinces of British India, only comparatively backward areas came to Pakistan intact. The Punjab and Bengal were divided, and Kashmir became disputed territory.</li>
+            <li>Economically, the situation seemed almost hopeless: the new frontier cut off Pakistani raw materials from the Indian factories, disrupting industry, commerce, and agriculture.</li>
+            <li>The partition and the movement of refugees were accompanied by terrible massacres for which both communities were responsible. India remained openly unfriendly; its economic superiority expressed itself in a virtual blockade. The dispute over Kashmir brought the two countries to the verge of war.</li>
+          </ul>
+        </div>
+      </details>
+
+      <aside class="note novel">
+        <b>In Rushdie</b>
+        The narrator of <i>Shame</i> reminds his readers that the name Pakistan was thought up in England by Muslim intellectuals, as an acronym of the regions it was meant to unite. Pakistan, he suggests, may simply have been “insufficiently imagined”.
+      </aside>
+    </section>
+
+    <section id="zab" style="--accent: var(--rani)">
+      <header>
+        <h2>Zulfikar Ali Bhutto</h2>
+        <p class="word"><span class="s ur" lang="ur" dir="rtl">روٹی، کپڑا اور مکان</span> <span><i>roṭī, kapṛā aur makān</i>, “bread, clothing and shelter”, the slogan of Bhutto’s Pakistan People’s Party</span></p>
+      </header>
+      <p class="lead-in">Zulfikar Ali Bhutto (born 5 January 1928 near Larkana, Sindh; died 4 April 1979 in Rawalpindi) served as president (1971–73) and prime minister (1973–77) of Pakistan. Although a popular leader, he was overthrown and executed by the military.</p>
+
+      <p class="flip-hint">Click a card to turn it over.</p>
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="big">Origins</span><span class="small">Larkana, Bombay, Berkeley, Oxford</span></span>
+          <span class="face back"><span class="txt">Born into a noble Rajput family that had accepted Islam, the son of a prominent political figure in the colonial government. Educated in Bombay and at Berkeley (B.A., 1950), he studied law at Oxford and practised and lectured in England before returning to Pakistan in 1953.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="num">1967</span><span class="small">the PPP</span></span>
+          <span class="face back"><span class="txt">After resigning over the peace with India that ended the 1965 war over Kashmir, he founded the Pakistan People’s Party in December 1967, denounced the Ayub Khan regime as a dictatorship and was imprisoned (1968–69).</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--amber)"><span class="inner">
+          <span class="face front"><span class="big">The author</span><span class="small">two books</span></span>
+          <span class="face back"><span class="txt">Bhutto wrote <i>The Myth of Independence</i> (1969) and <i>The Great Tragedy</i> (1971).</span></span>
+        </span></button>
+      </div>
+
+      <details class="acc" open>
+        <summary>Minister under Ayub Khan, 1958–66</summary>
+        <div class="body">
+          <ul class="points">
+            <li>In Karachi he set up a law practice and was appointed a member of Pakistan’s delegation to the United Nations in 1957.</li>
+            <li>After Mohammad Ayub Khan seized the government in 1958, Bhutto was appointed commerce minister and then held other cabinet posts. As foreign minister (1963–66) he began working for greater independence from Western powers and for closer ties with China.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>The 1970 elections and the loss of East Pakistan</summary>
+        <div class="body">
+          <ul class="points">
+            <li>After the overthrow of the Ayub Khan regime by Gen. Agha Muhammad Yahya Khan, national elections were held in 1970. Although Bhutto and his party won a sweeping electoral victory in West Pakistan, the biggest election winner was the Awami League, an East Pakistan-based party that had campaigned for full autonomy for East Pakistan.</li>
+            <li>Bhutto refused to form a government with this separatist party, causing a nullification of the election. The widespread rioting that followed degenerated into civil war, after which East Pakistan, with the help of India, emerged as the independent state of Bangladesh.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>President and prime minister, 1971–77</summary>
+        <div class="body">
+          <ul class="points">
+            <li>After West Pakistan’s humiliating defeat by India, Yahya Khan turned the government over to Bhutto on 20 December 1971. Bhutto placed his predecessor under house arrest, nationalized several key industries, and undertook the taxation of the landed families in his first acts as president.</li>
+            <li>After the new constitution (1973) made the presidency largely ceremonial, Bhutto became prime minister. In both capacities he also filled the cabinet posts of foreign affairs, defence, and interior. His government, retaining martial law, began a process of Islamization.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Fall and execution, 1977–79</summary>
+        <div class="body">
+          <ul class="points">
+            <li>Sensing that the public was turning against his rule by decree, Bhutto ordered new elections in 1977 to obtain a popular mandate. His party won by a large majority, but the opposition charged him with electoral fraud.</li>
+            <li>The government was seized by Gen. Mohammad Zia-ul-Haq, the army chief of staff, on 5 July 1977. Soon afterward Bhutto was imprisoned. He was sentenced to death (18 March 1978) on the charge of having ordered the assassination of a political opponent in 1974; after an appeal to a higher court, he was hanged on 4 April 1979, despite appeals for clemency from several world leaders.</li>
+            <li>His daughter, Benazir Bhutto, later became Pakistan’s first female prime minister; his grandson, Bilawal Bhutto Zardari, took on the leadership of the PPP in 2007.</li>
+          </ul>
+        </div>
+      </details>
+
+      <aside class="note novel">
+        <b>In Rushdie</b>
+        In <i>Shame</i>, Iskander Harappa, the playboy turned charismatic politician, is widely read as a portrait of Zulfikar Ali Bhutto. Like Bhutto, he is overthrown by his own army chief and hanged.
+      </aside>
+    </section>
+
+    <section id="zia" style="--accent: var(--violet)">
+      <header>
+        <h2>Zia-ul-Haq</h2>
+        <p class="word"><span class="s ur" lang="ur" dir="rtl">نظامِ مصطفیٰ</span> <span><i>niẓām-e muṣṭafā</i>, “the system of the Prophet”, the slogan of the Islamization of state and society</span></p>
+      </header>
+      <p class="lead-in">Mohammad Zia-ul-Haq (born 12 August 1924 in Jullundur, Punjab, now in India; died 17 August 1988 near Bahawalpur) was chief of army staff, chief martial-law administrator, and president of Pakistan (1978–88).</p>
+
+      <p class="flip-hint">Click a card to turn it over.</p>
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="big">The soldier</span><span class="small">from Dehra Dun to army chief</span></span>
+          <span class="face back"><span class="txt">Commissioned in 1945 from the Royal Indian Military Academy in Dehra Dun, he served with British armoured forces in Southeast Asia. In 1972 he presided over the military courts that tried officers accused of plotting against Bhutto, who promoted him to lieutenant general in 1975 and made him chief of army staff in 1976.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="num">5 July 1977</span><span class="small">the coup</span></span>
+          <span class="face back"><span class="txt">Zia seized power from Bhutto in a bloodless coup and became chief martial-law administrator while remaining army chief of staff. His initial declaration that he would return government to civilian hands was at variance with his behaviour.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--amber)"><span class="inner">
+          <span class="face front"><span class="num">17 Aug 1988</span><span class="small">the crash</span></span>
+          <span class="face back"><span class="txt">Zia was killed when his aircraft blew up in flight from Bahawalpur. The crash also killed the U.S. ambassador to Pakistan and several top-ranking generals; its cause has never been fully determined.</span></span>
+        </span></button>
+      </div>
+
+      <details class="acc" open>
+        <summary>Eliminating Bhutto</summary>
+        <div class="body">
+          <ul class="points">
+            <li>Zia’s change of direction hinted that there were powers behind the scene determined to eliminate Bhutto as an active player. The decision was made not to conduct new elections, to arrest and try Bhutto, and ultimately to ignore the pleadings from other governments to spare his life. Found guilty and sentenced to death, Bhutto was hanged on 4 April 1979.</li>
+            <li>Zia assumed the presidency after Fazal Elahi Chaudhry resigned in 1978. He suspended political parties in 1979, banned labour strikes, imposed strict censorship on the press, and declared martial law in the country (nominally lifted in 1985).</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Islamization</summary>
+        <div class="body">
+          <ul class="points">
+            <li>A devout Muslim, Zia believed that religious tradition should guide Pakistan’s institutions in all aspects of daily life. Islamization became the guiding principle of his plan to reform Pakistan, to reassure its unity, and to galvanize the country to meet all threats, foreign and domestic. Clearly, the programme was also geared to reinforce his rule and establish his legitimacy.</li>
+            <li>The 1979 revolution in Iran, which ended the Pahlavi monarchy, dovetailed with developments in Pakistan. Zia called for criminal punishments in keeping with Islamic law and insisted on banking practices and economic activity that followed Islamic experience.</li>
+            <li>In 1984 he put his Islamization programme to a referendum and coupled it to a vote of confidence in his presidency that would give him another five years in office. He won overwhelming approval, though only half of the eligible voters took part and the opposition insisted that the vote was rigged.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Afghanistan: Pakistan as a “frontline state”</summary>
+        <div class="body">
+          <ul class="points">
+            <li>The Soviet invasion of Afghanistan in December 1979 reinforced Zia’s belief that only Islamic practices could unite the Muslims of Pakistan and Afghanistan against an alien and aggressive neighbour. Zia played a major role in assisting the Afghan resistance, the mujahideen, whose leaders set up their headquarters in and around Peshawar. Several million Afghan refugees came to Pakistan, most of them housed in camps near the border.</li>
+            <li>Pakistan sought help from other Muslim states, especially Saudi Arabia, and after 1981 from the United States under Ronald Reagan. Pakistan became the third largest recipient of U.S. military aid, several billion dollars by the end of Reagan’s second term, even though Islamabad was known to be pursuing an aggressive nuclear weapons programme. U.S. intelligence services did not discourage Pakistan’s Inter-Service Intelligence from working closely with the most radical religious movements in Afghanistan.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Elections without parties and the end of martial law, 1985–86</summary>
+        <div class="body">
+          <ul class="points">
+            <li>In February 1985 Zia allowed national and provincial assembly elections, though without the participation of political parties. His opponents called his Islamic system a ploy to acquire still wider powers and urged a boycott, but voters turned out in considerable numbers. Zia handpicked Muhammad Khan Junejo, a Sindhi politician and landowner, as prime minister.</li>
+            <li>Martial law was officially lifted in December 1985. Junejo revived the Pakistan Muslim League, the Muslim League (J), and Benazir Bhutto returned from exile to lead the PPP. The key rivals for national power were now the Muslim League (J) and Bhutto’s PPP.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Ethnic violence in Karachi</summary>
+        <div class="body">
+          <ul class="points">
+            <li>Lifting martial law coincided with intensified conflict between Pakistan’s ethnic communities, above all in Karachi. Native Sindhis complained that the <i>muhajirs</i>, Muslim immigrants from India, monopolized political and economic power in the city. The founding of the Muhajir Qaumi Movement (MQM) in the mid-1980s was both a cause and a consequence of the violence against the immigrant community.</li>
+            <li>Pashtun migrants, notably Afghan Pashtuns, moving from the frontier region to Karachi posed a further challenge, and a narcotics and weapons trade rooted in the North-West Frontier Province fuelled the conflict. By 1986 intercommunal violence in Karachi had reached a level not seen since partition, with riots also in Quetta and Hyderabad, and the army was called in to restore order.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>The last year, 1988</summary>
+        <div class="body">
+          <ul class="points">
+            <li>Confronting major opposition, intensified ethnic warfare and a troubled economy, Zia dissolved the national and provincial assemblies in May 1988 and dismissed the Junejo government, alleging corruption and weakness. He promised another national election and in June made himself head of a caretaker government. Although the country was in considerable disarray, Zia pretended that everything was under control, until his death in the plane crash of 17 August 1988.</li>
+          </ul>
+        </div>
+      </details>
+
+      <aside class="note novel">
+        <b>In Rushdie</b>
+        In <i>Shame</i>, General Raza Hyder, who overthrows Iskander Harappa and governs in the name of God, is modelled on Zia-ul-Haq.
+      </aside>
+    </section>
+
+    <section id="benazir" style="--accent: var(--amber)">
+      <header>
+        <h2>Benazir Bhutto</h2>
+        <p class="word"><span class="s ur" lang="ur" dir="rtl">بے نظیر</span> <span><i>be-naẓīr</i>, “without equal, incomparable”: the meaning of her first name</span></p>
+      </header>
+      <p class="lead-in">Benazir Bhutto (born 21 June 1953 in Karachi; died 27 December 2007 in Rawalpindi) became the first woman leader of a Muslim nation in modern history. She served two terms as prime minister of Pakistan, 1988–90 and 1993–96, and was assassinated while campaigning for parliamentary elections.</p>
+
+      <p class="flip-hint">Click a card to turn it over.</p>
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--amber)"><span class="inner">
+          <span class="face front"><span class="big">Harvard and Oxford</span><span class="small">her education</span></span>
+          <span class="face back"><span class="txt">She studied at Harvard (B.A., 1973), then philosophy, political science and economics at Oxford (B.A., 1976), where she also completed a postgraduate degree in international law (M.A., 1977).</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="num">1 Dec 1988</span><span class="small">prime minister</span></span>
+          <span class="face back"><span class="txt">She became Pakistan’s first female prime minister and head of its first civilian government since the dissolution of her father’s government in 1977.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="big"><i>Daughter of the East</i></span><span class="small">her autobiography</span></span>
+          <span class="face back"><span class="txt">Her autobiography appeared in 1988 (also published as <i>Daughter of Destiny</i>, 1989). <i>Reconciliation: Islam, Democracy, and the West</i> was published posthumously in 2008.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--peacock)"><span class="inner">
+          <span class="face front"><span class="big">Asif Ali Zardari</span><span class="small">her husband</span></span>
+          <span class="face back"><span class="txt">A controversial businessman and senator, jailed from 1996 on a variety of charges and released on bail in 2004. After her death he took over the leadership of the PPP, later followed by their son, Bilawal Bhutto Zardari.</span></span>
+        </span></button>
+      </div>
+
+      <details class="acc" open>
+        <summary>Political beginnings, 1977–88</summary>
+        <div class="body">
+          <ul class="points">
+            <li>Shortly after she completed her studies in 1977 and returned to Pakistan, her father was deposed by Gen. Zia-ul-Haq. After her father’s execution in 1979, she became the titular head of the Pakistan People’s Party (PPP) and endured frequent house arrest from 1979 to 1984.</li>
+            <li>In exile from 1984 to 1986, she returned after the lifting of martial law and soon became the foremost figure of the opposition to Zia. After Zia’s death in August 1988, the PPP won the single largest bloc of seats in the National Assembly.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>First term, 1988–90</summary>
+        <div class="body">
+          <ul class="points">
+            <li>She formed a fragile coalition with independent parliamentarians from her home province of Sindh, but they left the following year as ethnic tensions in the province escalated. Without them she was unable to pass legislation to address poverty, governmental corruption and increasing crime, and she bore the brunt of a discordant relationship with the military leadership.</li>
+            <li>In August 1990 President Ghulam Ishaq Khan dismissed her government on charges of corruption and other malfeasance. After the PPP’s defeat in the elections of October 1990, she led the opposition against her successor, Nawaz Sharif.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Second term, 1993–96</summary>
+        <div class="body">
+          <ul class="points">
+            <li>In October 1993 the PPP won a plurality of votes and beat Sharif’s Pakistan Muslim League (PML-N) in every province except Balochistan, including Sharif’s home province of Punjab. Bhutto made headway in foreign relations, attracted foreign investment and implemented social programmes, with an ally in President Farooq Leghari, a member of the PPP.</li>
+            <li>But the economy remained unstable and law and order declined. Her brother Murtaza accused her husband, Asif Ali Zardari, of corruption. With her public support dwindling, Leghari dismissed her government in November 1996.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Corruption charges and exile, 1997–2007</summary>
+        <div class="body">
+          <ul class="points">
+            <li>After the PPP’s decisive defeat in 1997, Sharif’s administration pursued the corruption charges against her with British and Swiss cooperation. In 1999 she and her husband were convicted by a Lahore court, a verdict overturned by the Supreme Court in 2001 because of evidence of governmental interference.</li>
+            <li>She reached no accommodation with Gen. Pervez Musharraf, who seized power in a coup in 1999. Facing arrest warrants, she remained in exile in London and Dubai. A 2002 decree barred prime ministers from a third term, and a law of 2000 kept convicted individuals from party office; the PPP therefore registered a legally separate branch, the Pakistan People’s Party Parliamentarians (PPPP), which won a strong vote in 2002.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Return and assassination, 2007</summary>
+        <div class="body">
+          <ul class="points">
+            <li>Shortly before his re-election, Musharraf granted her an amnesty for the corruption charges, which the Supreme Court criticized as unconstitutional. In October 2007 she returned to Karachi after eight years of self-imposed exile; the celebrations were marred by a suicide attack on her motorcade that killed numerous supporters.</li>
+            <li>In December 2007 she was assassinated in a similar attack while campaigning for the upcoming parliamentary elections.</li>
+          </ul>
+        </div>
+      </details>
+
+      <aside class="note novel">
+        <b>In Rushdie</b>
+        Iskander Harappa’s daughter Arjumand, the “virgin Ironpants” who guards her father’s legacy, has often been read as an allusion to Benazir Bhutto. <i>Shame</i> appeared in 1983, during Benazir’s years under house arrest and five years before she became prime minister.
+      </aside>
+    </section>
+
+    <section id="timeline" style="--accent: var(--peacock)">
+      <header><h2>Timeline</h2></header>
+      <ol class="timeline">
+        <li style="--c: var(--peacock)"><span class="y">1940</span><span>The Muslim League under Jinnah formally endorses the demand for Pakistan.</span></li>
+        <li style="--c: var(--rani)"><span class="y">August 1947</span><span>Partition of British India; Pakistan is founded in two parts, West and East.</span></li>
+        <li style="--c: var(--violet)"><span class="y">1958</span><span>Ayub Khan seizes power; Zulfikar Ali Bhutto becomes commerce minister.</span></li>
+        <li style="--c: var(--amber)"><span class="y">1963–66</span><span>Bhutto is foreign minister; he resigns after the peace with India that follows the 1965 war over Kashmir.</span></li>
+        <li style="--c: var(--rani)"><span class="y">December 1967</span><span>Bhutto founds the Pakistan People’s Party.</span></li>
+        <li style="--c: var(--peacock)"><span class="y">1970</span><span>National elections: the Awami League wins overall, the PPP in West Pakistan.</span></li>
+        <li style="--c: var(--rani)"><span class="y">December 1971</span><span>East Pakistan becomes Bangladesh; on 20 December Yahya Khan hands the government to Bhutto.</span></li>
+        <li style="--c: var(--violet)"><span class="y">1973</span><span>New constitution; Bhutto becomes prime minister.</span></li>
+        <li style="--c: var(--violet)"><span class="y">5 July 1977</span><span>Zia-ul-Haq seizes power in a bloodless coup.</span></li>
+        <li style="--c: var(--rani)"><span class="y">4 April 1979</span><span>Bhutto is hanged in Rawalpindi.</span></li>
+        <li style="--c: var(--amber)"><span class="y">December 1979</span><span>Soviet invasion of Afghanistan; Pakistan becomes a “frontline state”.</span></li>
+        <li style="--c: var(--peacock)"><span class="y">1983</span><span>Rushdie’s <i>Shame</i> is published.</span></li>
+        <li style="--c: var(--violet)"><span class="y">1984</span><span>Referendum on Islamization and on five more years for Zia.</span></li>
+        <li style="--c: var(--peacock)"><span class="y">1985–86</span><span>Elections without parties; martial law lifted; Benazir Bhutto returns from exile.</span></li>
+        <li style="--c: var(--violet)"><span class="y">17 August 1988</span><span>Zia dies in a plane crash near Bahawalpur.</span></li>
+        <li style="--c: var(--amber)"><span class="y">1 December 1988</span><span>Benazir Bhutto becomes prime minister (dismissed 1990; second term 1993–96).</span></li>
+        <li style="--c: var(--rani)"><span class="y">1999</span><span>Pervez Musharraf seizes power; Benazir Bhutto lives in exile.</span></li>
+        <li style="--c: var(--amber)"><span class="y">27 Dec 2007</span><span>Benazir Bhutto is assassinated while campaigning.</span></li>
+      </ol>
+    </section>
+
+    <section id="links" style="--accent: var(--amber)">
+      <header><h2>Further links</h2></header>
+
+      <h3 style="margin-top: 0">Pakistan</h3>
+      <ul class="links">
+        <li><a href="https://www.britannica.com/place/Pakistan">Encyclopaedia Britannica: Pakistan</a><span>The comprehensive country article, including the history since 1947.</span></li>
+        <li><a href="https://www.britannica.com/biography/Mohammed-Ali-Jinnah">Britannica: Mohammed Ali Jinnah</a><span>Biography of the founder of Pakistan.</span></li>
+        <li><a href="https://www.britannica.com/event/Partition-of-India">Britannica: Partition of India</a><span>Causes, course and consequences of the division of 1947.</span></li>
+      </ul>
+
+      <h3>The Bhuttos and Zia</h3>
+      <ul class="links">
+        <li><a href="https://www.britannica.com/biography/Zulfikar-Ali-Bhutto">Britannica: Zulfikar Ali Bhutto</a><span>From Larkana to the gallows in Rawalpindi.</span></li>
+        <li><a href="https://www.britannica.com/biography/Mohammad-Zia-ul-Haq">Britannica: Mohammad Zia-ul-Haq</a><span>The general who ruled Pakistan from 1977 to 1988.</span></li>
+        <li><a href="https://www.britannica.com/biography/Benazir-Bhutto">Britannica: Benazir Bhutto</a><span>Two terms as prime minister, exile and assassination.</span></li>
+        <li><a href="https://www.britannica.com/topic/Pakistan-Peoples-Party">Britannica: Pakistan People’s Party</a><span>The party founded by Zulfikar Ali Bhutto and led by his family ever since.</span></li>
+        <li><a href="https://www.britannica.com/event/Afghan-War">Britannica: Afghan War</a><span>The Soviet war in Afghanistan, 1978–92, and Pakistan’s role in it.</span></li>
+      </ul>
+    </section>
+
+    <section id="quiz" style="--accent: var(--peacock)">
+      <header>
+        <h2>Quiz</h2>
+        <p style="margin: 0.5rem 0 0">Twelve questions on this page. Choose an answer to see straight away whether it is right.</p>
+      </header>
+      <div id="quiz-body"></div>
+      <noscript><p>The quiz needs JavaScript.</p></noscript>
+    </section>
+
+    <p class="home"><a href="index.html">Back to the seminar overview</a></p>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="band"></div>
+  <div class="wrap inner">
+    <div>
+      <div class="who">Prof. Dr. Stefan Horlacher</div>
+      <p>TU Dresden <span class="term">Wintersemester 2026/27</span></p>
+      <p class="seminar">Hauptseminar “Born at Midnight, Born in Shame: The Traumatic Birth of India and Pakistan in Salman Rushdie’s Fiction”</p>
+    </div>
+    <div class="tu-logo"><img src="tud-logo-mark.png" alt="" width="80" height="80"><span>Technische<br>Universität<br>Dresden</span></div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Quiz ----------
+   To edit: change the entries below. "a" lists the options, the FIRST one is the correct answer
+   (the options are shuffled when the page loads). "why" is shown after answering. */
+var QUESTIONS = [
+  { q: "Under whose leadership did the All India Muslim League demand a separate Muslim state?",
+    a: ["Mohammed Ali Jinnah", "Zulfikar Ali Bhutto", "Mohammad Ayub Khan", "Mahatma Gandhi"],
+    why: "Jinnah concluded that only a separate state could preserve India’s Muslims from subordination; by 1940 the League had endorsed the demand." },
+  { q: "Which two provinces of British India were divided at partition?",
+    a: ["The Punjab and Bengal", "Sindh and Balochistan", "Kashmir and Bihār", "Bombay and Madras"],
+    why: "The Punjab and Bengal were divided, and Kashmir became disputed territory." },
+  { q: "Which party did Zulfikar Ali Bhutto found in December 1967?",
+    a: ["The Pakistan People’s Party", "The Awami League", "The Muslim League (J)", "The Muhajir Qaumi Movement"],
+    why: "Bhutto founded the PPP after resigning as foreign minister in protest against the peace with India." },
+  { q: "Why was the result of the 1970 elections nullified?",
+    a: ["Bhutto refused to form a government with the Awami League", "The army annulled the vote because of fraud", "The Awami League boycotted the assembly", "India refused to recognize the result"],
+    why: "The Awami League had won overall, but Bhutto refused to govern with the party that demanded autonomy for East Pakistan." },
+  { q: "What did the constitution of 1973 change for Bhutto?",
+    a: ["The presidency became largely ceremonial, so he became prime minister", "It made him president for life", "It abolished martial law and his party", "It banned him from holding a cabinet post"],
+    why: "After 1973 Bhutto governed as prime minister, while also holding foreign affairs, defence and interior." },
+  { q: "How did Zia-ul-Haq come to power?",
+    a: ["In a bloodless coup on 5 July 1977", "By winning the 1977 elections", "As Bhutto’s chosen successor", "After Bhutto’s death in a plane crash"],
+    why: "Zia, Bhutto’s army chief of staff, seized power and became chief martial-law administrator." },
+  { q: "What happened to Zulfikar Ali Bhutto on 4 April 1979?",
+    a: ["He was hanged in Rawalpindi", "He went into exile in London", "He was released from prison", "He was elected president again"],
+    why: "Bhutto was hanged despite appeals for clemency from several world leaders." },
+  { q: "Which event turned Pakistan into a “frontline state”?",
+    a: ["The Soviet invasion of Afghanistan in December 1979", "The revolution in Iran", "The war with India over Kashmir", "The independence of Bangladesh"],
+    why: "Pakistan supported the Afghan mujahideen and took in several million refugees, with Saudi and U.S. help." },
+  { q: "What was Zia’s Islamization programme linked to in the referendum of 1984?",
+    a: ["A vote of confidence giving him five more years as president", "A new constitution", "The return of political parties", "Peace with India"],
+    why: "Zia won overwhelming approval, but only half of the eligible voters took part, and the opposition called the vote rigged." },
+  { q: "How did Zia-ul-Haq die?",
+    a: ["His aircraft blew up in flight from Bahawalpur", "He was hanged after a trial", "He was shot by his bodyguards", "He died in exile in Dubai"],
+    why: "The crash of 17 August 1988 also killed the U.S. ambassador; its cause has never been fully determined." },
+  { q: "What made Benazir Bhutto’s appointment on 1 December 1988 historic?",
+    a: ["She was the first woman to lead a Muslim nation in modern history", "She was the youngest president of Pakistan", "She was the first leader elected without a party", "She was the first prime minister from Punjab"],
+    why: "She headed Pakistan’s first civilian government since her father’s was dissolved in 1977." },
+  { q: "How did Benazir Bhutto’s life end?",
+    a: ["She was assassinated while campaigning in December 2007", "She died in a plane crash", "She was executed by the military", "She died in exile in London"],
+    why: "After returning from eight years of exile in October 2007, she was killed in an attack in Rawalpindi on 27 December 2007." }
+];
+
+(function () {
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  /* ---------- Tabs ---------- */
+  var tabLinks = Array.prototype.slice.call(document.querySelectorAll(".tabs a"));
+  var ids = tabLinks.map(function (a) { return a.getAttribute("href").slice(1); });
+  var layout = document.getElementById("top");
+
+  function show(id, scroll) {
+    if (ids.indexOf(id) === -1) id = ids[0];
+    ids.forEach(function (x, i) {
+      document.getElementById(x).classList.toggle("active", x === id);
+      if (x === id) tabLinks[i].setAttribute("aria-current", "true");
+      else tabLinks[i].removeAttribute("aria-current");
+    });
+    var current = tabLinks[ids.indexOf(id)];
+    if (current.scrollIntoView && window.matchMedia("(max-width: 60rem)").matches) {
+      current.scrollIntoView({ block: "nearest", inline: "center" });
+    }
+    if (history.replaceState) history.replaceState(null, "", "#" + id);
+    if (scroll) layout.scrollIntoView();
+  }
+
+  ids.forEach(function (id, i) {
+    var pager = el("div", "pager");
+    if (i > 0) {
+      var prev = el("button", "prev", "Back: " + tabLinks[i - 1].textContent);
+      prev.type = "button";
+      prev.addEventListener("click", function () { show(ids[i - 1], true); });
+      pager.appendChild(prev);
+    }
+    if (i < ids.length - 1) {
+      var next = el("button", "next", "Next: " + tabLinks[i + 1].textContent);
+      next.type = "button";
+      next.addEventListener("click", function () { show(ids[i + 1], true); });
+      pager.appendChild(next);
+    }
+    document.getElementById(id).appendChild(pager);
+  });
+
+  tabLinks.forEach(function (a, i) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      show(ids[i], window.matchMedia("(max-width: 60rem)").matches);
+    });
+  });
+  window.addEventListener("hashchange", function () { show(location.hash.slice(1), false); });
+
+  document.body.classList.add("tabbed");
+  show(location.hash.slice(1), false);
+
+  /* ---------- Cards that turn over ---------- */
+  document.querySelectorAll(".flip").forEach(function (card) {
+    card.setAttribute("aria-pressed", "false");
+    card.addEventListener("click", function () {
+      card.setAttribute("aria-pressed", card.getAttribute("aria-pressed") === "true" ? "false" : "true");
+    });
+  });
+
+  /* ---------- Quiz ---------- */
+  var body = document.getElementById("quiz-body");
+  var answered, correct;
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function build() {
+    answered = 0; correct = 0;
+    body.innerHTML = "";
+
+    var progress = el("div", "progress");
+    progress.setAttribute("aria-live", "polite");
+    var result = el("div", "result");
+    result.hidden = true;
+
+    function update() {
+      progress.textContent = answered + " of " + QUESTIONS.length + " answered, " + correct + " correct";
+      if (answered === QUESTIONS.length) {
+        progress.hidden = true;
+        var share = correct / QUESTIONS.length;
+        var verdict = share === 1 ? "Flawless. You are ready for the novels."
+          : share >= 0.75 ? "Well done. A second look at the questions you missed will close the gaps."
+          : share >= 0.5 ? "A solid start. Reread the sections behind the questions you missed and try again."
+          : "Worth another read. Go through the tabs once more and try again.";
+        result.innerHTML = "";
+        result.appendChild(el("div", "score", correct + " / " + QUESTIONS.length));
+        result.appendChild(el("p", "", verdict));
+        var again = el("button", "", "Start again");
+        again.type = "button";
+        again.addEventListener("click", function () { build(); layout.scrollIntoView(); });
+        result.appendChild(again);
+        result.hidden = false;
+      }
+    }
+
+    QUESTIONS.forEach(function (item, i) {
+      var fs = el("fieldset", "q");
+      var lg = el("legend");
+      lg.appendChild(el("span", "num", (i + 1) + ". "));
+      lg.appendChild(document.createTextNode(item.q));
+      fs.appendChild(lg);
+
+      var opts = el("div", "opts");
+      var why = el("p", "why", item.why);
+      why.hidden = true;
+      var right = item.a[0];
+
+      shuffle(item.a).forEach(function (text) {
+        var b = el("button", "", text);
+        b.type = "button";
+        b.addEventListener("click", function () {
+          var all = opts.querySelectorAll("button");
+          for (var k = 0; k < all.length; k++) {
+            all[k].disabled = true;
+            if (all[k].textContent === right) all[k].classList.add("right");
+          }
+          if (text === right) correct++; else b.classList.add("wrong");
+          answered++;
+          why.hidden = false;
+          update();
+        });
+        opts.appendChild(b);
+      });
+
+      fs.appendChild(opts);
+      fs.appendChild(why);
+      body.appendChild(fs);
+    });
+
+    body.appendChild(result);
+    body.appendChild(progress);
+    update();
+  }
+
+  build();
+})();
+</script>
+</body>
+</html>
