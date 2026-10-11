@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salman Rushdie – Born at Midnight, Born in Shame</title>
+<meta name="description" content="Background material on Salman Rushdie: life, the two seminar novels, key ideas, the fatwa and the attack of 2022. Hauptseminar, Prof. Dr. Stefan Horlacher, TU Dresden.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&family=Rozha+One&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=5">
+<style>
+  .hero-india { display: grid; grid-template-columns: 1fr auto; gap: 1rem 3rem; align-items: end; padding: 2rem 0 3.5rem; }
+  .hero-india h1 { font-size: clamp(3.5rem, 9vw, 7rem); }
+  .hero-india .deva { font-family: var(--display); font-size: clamp(5rem, 17vw, 13rem); line-height: 0.95; color: var(--marigold); }
+  .hero-india .intro { font-size: 1.25rem; max-width: 40ch; margin: 1rem 0 0; color: #ebe8ff; }
+  .motto { border-top: 1px solid rgba(255,255,255,0.2); padding: 1.1rem 0 1.4rem; color: #d7d3f5; font-size: 1rem; }
+  .motto .s { font-family: var(--display); font-size: 1.6rem; color: #fff; margin-right: 0.6rem; }
+
+  .layout { display: grid; grid-template-columns: 14rem minmax(0, 46rem); gap: 3.5rem; padding-top: 3rem; align-items: start; scroll-margin-top: 0.5rem; }
+
+  /* Tabs */
+  .tabs { position: sticky; top: 1.25rem; font-size: 1.05rem; }
+  .tabs ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+  .tabs a {
+    display: block; padding: 0.5rem 1rem; border-radius: 12px 12px 12px 3px;
+    color: var(--ink); text-decoration: none; background: var(--wash);
+    border-left: 6px solid var(--c, var(--rani)); transition: background 0.15s, color 0.15s;
+  }
+  .tabs a:hover { background: #e3defa; }
+  .tabs a[aria-current="true"] { background: var(--midnight); color: #fff; font-weight: 700; }
+
+  main { min-height: 32rem; }
+  section { padding-bottom: 2.5rem; scroll-margin-top: 1.5rem; }
+  .tabbed main > section { display: none; }
+  .tabbed main > section.active { display: block; animation: panel 0.35s ease-out; }
+  @keyframes panel { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  section > header { margin-bottom: 1.5rem; }
+  section h2 { font-size: clamp(2rem, 4.2vw, 2.9rem); }
+  section h3 { font-size: 1.6rem; margin: 2.25rem 0 0.75rem; }
+
+  /* Sanskrit / Hindi keyword that belongs to each section */
+  .word { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.75rem; margin: 0.5rem 0 0; color: var(--ink-soft); font-size: 1rem; }
+  .word .s { font-family: var(--display); font-size: 1.75rem; line-height: 1.3; color: var(--accent); }
+  .word .bn { font-family: "Noto Serif Bengali", var(--display); font-weight: 600; }
+
+  .lead-in { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
+
+  .points { list-style: none; margin: 0; padding: 0; }
+  .points > li { position: relative; padding-left: 1.6rem; margin-bottom: 1rem; }
+  .points > li::before {
+    content: ""; position: absolute; left: 0; top: 0.62em; width: 0.6rem; height: 0.6rem;
+    background: var(--accent); border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+  }
+
+  blockquote { margin: 1.5rem 0; padding: 0 0 0 1.5rem; border-left: 6px solid var(--marigold); font-family: var(--display); font-size: 1.7rem; line-height: 1.25; }
+  blockquote footer { font-family: var(--body); font-size: 1rem; color: var(--ink-soft); margin-top: 0.5rem; }
+
+  .note { border-radius: 14px; padding: 0.9rem 1.2rem; margin: 1.25rem 0; font-size: 1rem; line-height: 1.55; }
+  .note b { display: block; }
+  .note.update { background: #fff4d6; }
+  .note.update b { color: #7a5200; }
+  .note.novel { background: var(--midnight); color: #ebe8ff; }
+  .note.novel b { color: var(--marigold); }
+
+  /* Timeline */
+  .timeline { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--midnight); }
+  .timeline li { position: relative; display: grid; grid-template-columns: 8.5rem 1fr; gap: 1rem; padding: 0 0 1.4rem 1.5rem; align-items: baseline; }
+  .timeline li::before { content: ""; position: absolute; left: -9px; top: 0.55rem; width: 15px; height: 15px; border-radius: 50%; background: var(--c, var(--rani)); border: 3px solid var(--paper); }
+  .timeline .y { font-family: var(--display); font-size: 1.45rem; line-height: 1.2; color: var(--midnight); }
+
+  /* Links */
+  .links { list-style: none; margin: 0; padding: 0; }
+  .links li { padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+  .links a { font-weight: 700; }
+  .links span { display: block; color: var(--ink-soft); font-size: 1rem; }
+
+  /* Quiz */
+  #quiz-body { background: var(--wash); border-radius: 28px 28px 28px 4px; padding: 2rem 2rem 2.25rem; }
+  .q { border: 0; margin: 0 0 2rem; padding: 0; }
+  .q legend { font-weight: 700; font-size: 1.2rem; line-height: 1.4; padding: 0; margin-bottom: 0.75rem; }
+  .q legend .num { color: var(--peacock); }
+  .opts { display: grid; gap: 0.5rem; }
+  .opts button {
+    font: inherit; text-align: left; cursor: pointer; color: var(--ink);
+    background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 0.6rem 1rem;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .opts button:hover:not(:disabled) { border-color: var(--midnight); }
+  .opts button:disabled { cursor: default; color: var(--ink-soft); }
+  .opts button.right { background: #d9f5ee; border-color: var(--peacock); color: var(--ink); font-weight: 700; }
+  .opts button.wrong { background: #ffe0ec; border-color: var(--rani); color: var(--ink); }
+  .opts button.right::after { content: "  ✓"; }
+  .opts button.wrong::after { content: "  ✗"; }
+  .why { margin: 0.75rem 0 0; font-size: 1rem; }
+  .result { background: var(--midnight); color: #fff; border-radius: 16px; padding: 1.5rem; }
+  .result .score { font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--marigold); }
+  .result p { margin: 0.5rem 0 1rem; }
+  .result button { font: inherit; font-weight: 700; cursor: pointer; border: 0; border-radius: 999px; padding: 0.55rem 1.3rem; background: #fff; color: var(--midnight); }
+  .progress { position: sticky; bottom: 0.75rem; margin-top: 1rem; display: inline-block; background: var(--midnight); color: #fff; border-radius: 999px; padding: 0.3rem 1rem; font-size: 1rem; }
+
+  /* Previous / next at the foot of each tab */
+  .pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+  .pager button {
+    font: inherit; cursor: pointer; border: 2px solid var(--midnight); border-radius: 999px;
+    padding: 0.45rem 1.2rem; background: none; color: var(--midnight); font-weight: 700;
+  }
+  .pager button.next { background: var(--midnight); color: #fff; margin-left: auto; }
+  .pager button:hover { background: var(--rani); border-color: var(--rani); color: #fff; }
+
+  .home { margin: 0.5rem 0 0; }
+  .home a {
+    display: inline-block; text-decoration: none; font-weight: 700; color: #fff;
+    background: var(--rani); border-radius: 999px; padding: 0.55rem 1.4rem;
+  }
+  .home a::before { content: "‹ "; }
+  .home a:hover { background: var(--midnight); color: #fff; }
+
+  /* Urdu in Nastaliq script */
+  .ur { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-weight: 400; }
+  .word .s.ur { font-size: 1.45rem; line-height: 2.3; }
+  .motto .s.ur { font-size: 1.35rem; line-height: 2.2; }
+  .hero-india .ur-hero { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(3.5rem, 11vw, 8rem); line-height: 1.9; color: var(--peacock-bright); }
+
+  .timeline li.key .y { color: var(--c); }
+  .timeline li.key span:last-child { font-weight: 700; }
+  .motto .s i { font-style: italic; }
+  .hero-india .ur-hero { font-size: clamp(3rem, 8vw, 6rem); }
+  .note.novel a { font-weight: 700; }
+
+  @media (max-width: 60rem) {
+    .layout { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding-top: 0; }
+    .tabs { position: sticky; top: 0; z-index: 5; background: var(--paper); margin-inline: -1rem; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); }
+    .tabs ol { display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.2rem; }
+    .tabs a { white-space: nowrap; border-left-width: 0; border-bottom: 4px solid var(--c, var(--rani)); border-radius: 10px; padding: 0.3rem 0.85rem; }
+    section, .layout { scroll-margin-top: 4.25rem; }
+  }
+  @media (max-width: 40rem) {
+    .hero-india { grid-template-columns: 1fr; }
+    .timeline li { grid-template-columns: 1fr; gap: 0; }
+    #quiz-body { padding: 1.5rem 1.1rem 2rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="band"></div>
+
+
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topline">
+      <a href="index.html">Born at Midnight, Born in Shame: all topics</a>
+      <span>Background material</span>
+    </div>
+    <div class="hero-india">
+      <div>
+        <h1>Salman Rushdie</h1>
+        <p class="intro">Born in Bombay two months before independence, educated in England, condemned to death by a fatwa and attacked on stage decades later: the life and work of the author of <i>Midnight’s Children</i> and <i>Shame</i>.</p>
+      </div>
+      <div class="deva ur-hero" lang="ur" dir="rtl" aria-hidden="true">سلمان رشدی</div>
+    </div>
+    <div class="motto">
+      <span class="s">“I, too, am a translated man. I have been <i>borne across</i>.”</span>
+      The narrator of <i>Shame</i> (1983), playing on the Latin root of “translation”
+    </div>
+  </div>
+</header>
+
+<div class="wrap layout" id="top">
+  <nav class="tabs" aria-label="Sections of this page">
+    <ol>
+      <li><a href="#life" style="--c: var(--rani)">Life, 1947–88</a></li>
+      <li><a href="#novels" style="--c: var(--peacock)">The two novels</a></li>
+      <li><a href="#ideas" style="--c: var(--violet)">Key ideas</a></li>
+      <li><a href="#fatwa" style="--c: var(--amber)">The fatwa</a></li>
+      <li><a href="#attack" style="--c: var(--rani)">The attack, 2022</a></li>
+      <li><a href="#works" style="--c: var(--peacock)">Works</a></li>
+      <li><a href="#links" style="--c: var(--amber)">Further links</a></li>
+      <li><a href="#quiz" style="--c: var(--marigold)">Quiz</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+
+    <section id="life" style="--accent: var(--rani)">
+      <header>
+        <h2>Life, 1947–88</h2>
+        <p class="word"><span class="s" lang="hi">बम्बई</span> <span><i>Bambaī</i>, Bombay, the city of his birth and of Saleem Sinai’s childhood, renamed Mumbai in 1995</span></p>
+      </header>
+      <p class="lead-in">Ahmed Salman Rushdie was born on 19 June 1947 in Bombay into a prosperous, liberal Muslim family, barely two months before India’s independence. His life is bound up with all three countries this seminar is about: India, Pakistan and Britain.</p>
+
+      <p class="flip-hint">Click a card to turn it over.</p>
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="num">19 June 1947</span><span class="small">born in Bombay</span></span>
+          <span class="face back"><span class="txt">Rushdie belongs to the generation of “midnight’s children” himself: he was born in Bombay eight weeks before the stroke of midnight that made India independent, and grew up in the city that the novel turns into Saleem Sinai’s world.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="big">Rugby and Cambridge</span><span class="small">an English education</span></span>
+          <span class="face back"><span class="txt">At 13 he was sent to Rugby School in England, where he experienced racism as an outsider. He went on to read history at King’s College, Cambridge, graduating in 1968.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--peacock)"><span class="inner">
+          <span class="face front"><span class="num">1964</span><span class="small">the family moves to Karachi</span></span>
+          <span class="face back"><span class="txt">While he was at school in England, his parents left Bombay for Karachi. Pakistan thus became a family home he visited but never fully adopted, the vantage point from which he later wrote <i>Shame</i>.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--amber)"><span class="inner">
+          <span class="face front"><span class="big">The copywriter</span><span class="small">London in the 1970s</span></span>
+          <span class="face back"><span class="txt">After a brief spell in Karachi, he settled in London and earned his living in advertising while writing. His first novel, <i>Grimus</i> (1975), was a critical failure; his second changed everything.</span></span>
+        </span></button>
+      </div>
+
+      <details class="acc" open>
+        <summary>Breakthrough: <i>Midnight’s Children</i>, 1981</summary>
+        <div class="body">
+          <ul class="points">
+            <li><i>Midnight’s Children</i> won the Booker Prize in 1981. In 1993 it was named the “Booker of Bookers”, the best novel among the first 25 winners, and in 2008 it won the public vote for the “Best of the Booker”.</li>
+            <li>The novel made Rushdie the leading voice of a new Anglophone literature from the former colonies, and established magic realism, digressive storytelling and a hybrid English as his trademarks.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><i>Shame</i>, 1983, and a growing political profile</summary>
+        <div class="body">
+          <ul class="points">
+            <li><i>Shame</i>, his novel about Pakistan, was shortlisted for the Booker Prize in 1983.</li>
+            <li>In <i>The Jaguar Smile</i> (1987) he wrote about a journey through Sandinista Nicaragua; in essays and journalism he increasingly took positions on racism in Britain and on politics in South Asia.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section id="novels" style="--accent: var(--peacock)">
+      <header>
+        <h2>The two seminar novels</h2>
+        <p class="word"><span class="s" lang="hi">कहानी</span> <span><i>kahānī</i>, Hindi and Urdu for “story”</span></p>
+      </header>
+      <p class="lead-in">The two books are often read as a pair: <i>Midnight’s Children</i> as Rushdie’s novel of India, <i>Shame</i> as his novel of Pakistan. Both turn the birth of a nation into the story of a family.</p>
+
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--peacock)"><span class="inner">
+          <span class="face front"><span class="big"><i>Midnight’s Children</i></span><span class="small">1981</span></span>
+          <span class="face back"><span class="txt">Saleem Sinai, born at the stroke of midnight on 15 August 1947, tells his life story, and with it India’s, to his listener Padma. He and the other 1,000 children born in that first hour have magical gifts. His story runs from his grandfather’s Kashmir in 1915 to the end of Indira Gandhi’s Emergency.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="big"><i>Shame</i></span><span class="small">1983</span></span>
+          <span class="face back"><span class="txt">Set in a country that is “not Pakistan, or not quite”, the novel tells of the rivalry between the playboy politician Iskander Harappa and the pious general Raza Hyder, and of Sufiya Zinobia, who absorbs the shame that others refuse to feel. An intrusive narrator constantly comments on his own story.</span></span>
+        </span></button>
+      </div>
+
+      <aside class="note novel">
+        <b>On the other pages</b>
+        The history behind <i>Midnight’s Children</i> is on the <a href="india.html" style="color: var(--marigold)">India page</a>; Bhutto, Zia-ul-Haq and Benazir Bhutto, the models for <i>Shame</i>, are on the <a href="pakistan.html" style="color: var(--marigold)">Pakistan page</a>.
+      </aside>
+    </section>
+
+    <section id="ideas" style="--accent: var(--violet)">
+      <header>
+        <h2>Key ideas</h2>
+        <p class="word"><span class="s ur" lang="ur" dir="rtl">وطن</span> <span><i>waṭan</i>, Urdu for “homeland”</span></p>
+      </header>
+      <p class="lead-in">A handful of formulations by Rushdie himself recur in almost every discussion of his work. Each card names one; turn it over for its source and meaning.</p>
+
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="big">“Indias of the mind”</span><span class="small">imaginary homelands</span></span>
+          <span class="face back"><span class="txt">In the essay “Imaginary Homelands” (1982) Rushdie argues that writers in exile cannot reclaim the place they lost; they will create “imaginary homelands, Indias of the mind”. Memory is a broken mirror, and its fragments are what the migrant writer works with.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="big">“Plural and partial”</span><span class="small">migrant identity</span></span>
+          <span class="face back"><span class="txt">In the same essay he describes the identity of migrant writers as “at once plural and partial”: sometimes they straddle two cultures, sometimes they fall between two stools.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--peacock)"><span class="inner">
+          <span class="face front"><span class="big">“A translated man”</span><span class="small"><i>Shame</i></span></span>
+          <span class="face back"><span class="txt">The narrator of <i>Shame</i> calls himself “a translated man”, one who has been “borne across”, the literal meaning of the Latin <i>translatus</i>. Something is lost in translation, he insists, but something can also be gained.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--amber)"><span class="inner">
+          <span class="face front"><span class="big">Chutnification</span><span class="small"><i>Midnight’s Children</i></span></span>
+          <span class="face back"><span class="txt">Saleem works in a pickle factory and compares his story to pickling: the “chutnification of history”. Preserving the past means selecting, seasoning and inevitably distorting it.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="big">Magic realism</span><span class="small">the impossible as a lens</span></span>
+          <span class="face back"><span class="txt">Like Gabriel García Márquez and Günter Grass, two writers he admired, Rushdie lets the impossible happen in a historically precise world. The fantastic does not flee reality; it exposes what realistic description cannot reach.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--peacock)"><span class="inner">
+          <span class="face front"><span class="big">An English of his own</span><span class="small">language</span></span>
+          <span class="face back"><span class="txt">Rushdie mixes English with Hindi and Urdu words and the rhythms of Bombay speech. He has argued that English in India is no longer only the colonizer’s language but one that Indians have remade for themselves.</span></span>
+        </span></button>
+      </div>
+    </section>
+
+    <section id="fatwa" style="--accent: var(--amber)">
+      <header>
+        <h2>The fatwa</h2>
+        <p class="word"><span class="s ur" lang="ur" dir="rtl">فتویٰ</span> <span><i>fatwā</i>, a legal opinion issued by an Islamic religious authority</span></p>
+      </header>
+      <p class="lead-in">In September 1988 Rushdie published <i>The Satanic Verses</i>. Parts of the novel, which include dream sequences about a prophet in an imagined Arabian city, were condemned by many Muslims as blasphemous.</p>
+
+      <div class="flips wide">
+        <button class="flip" type="button" style="--c: var(--amber)"><span class="inner">
+          <span class="face front"><span class="num">14 Feb 1989</span><span class="small">the fatwa</span></span>
+          <span class="face back"><span class="txt">After protests and book burnings in India, Pakistan and Britain, Ayatollah Khomeini, Iran’s supreme leader, called on Muslims to kill the author and everyone involved in publishing the book. A bounty was offered for his death.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--rani)"><span class="inner">
+          <span class="face front"><span class="big">“Joseph Anton”</span><span class="small">a life in hiding</span></span>
+          <span class="face back"><span class="txt">Rushdie lived for years under British police protection, using the alias Joseph Anton, after his favourite writers Joseph Conrad and Anton Chekhov. In 2012 he published a memoir of these years under that title.</span></span>
+        </span></button>
+        <button class="flip" type="button" style="--c: var(--violet)"><span class="inner">
+          <span class="face front"><span class="big">The translators</span><span class="small">the violence spreads</span></span>
+          <span class="face back"><span class="txt">In 1991 the novel’s Japanese translator, Hitoshi Igarashi, was murdered and its Italian translator was stabbed and injured. In 1993 its Norwegian publisher, William Nygaard, was shot and seriously wounded.</span></span>
+        </span></button>
+      </div>
+
+      <details class="acc" open>
+        <summary>Bans, protests and a public debate</summary>
+        <div class="body">
+          <ul class="points">
+            <li>India banned the import of the book within weeks of its publication; many other countries with large Muslim populations followed. Protesters died in riots in Pakistan and India.</li>
+            <li>The affair became a defining debate about freedom of expression, religious offence and multiculturalism in Britain and beyond, and it still shapes how Rushdie is perceived.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Slowly back into the open, 1998–2022</summary>
+        <div class="body">
+          <ul class="points">
+            <li>In 1998 the Iranian government declared that it would neither support nor hinder the fatwa, although it was never formally revoked. Rushdie gradually resumed public life and moved to New York in 2000.</li>
+            <li>He was knighted in 2007, which provoked new protests in Pakistan and Iran.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section id="attack" style="--accent: var(--rani)">
+      <header>
+        <h2>The attack, 2022</h2>
+        <p class="word"><span class="s ur" lang="ur" dir="rtl">چاقو</span> <span><i>chāqū</i>, Urdu for “knife”</span></p>
+      </header>
+      <p class="lead-in">On 12 August 2022, more than 33 years after the fatwa, Rushdie was attacked on stage at the Chautauqua Institution in western New York, just before he was to give a talk. He was stabbed many times and survived, but lost the sight of his right eye.</p>
+
+      <details class="acc" open>
+        <summary><i>Knife</i>, 2024</summary>
+        <div class="body">
+          <ul class="points">
+            <li>In April 2024 Rushdie published <i>Knife: Meditations After an Attempted Murder</i>, an account of the attack, his recovery and his marriage to the poet Rachel Eliza Griffiths. In it he sets language against violence: language, too, he writes, is a knife.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>The trials, 2025–26</summary>
+        <div class="body">
+          <ul class="points">
+            <li>In February 2025 a jury in Mayville, New York, found the attacker, Hadi Matar, guilty of attempted murder and assault; in May 2025 he was sentenced to 25 years in prison.</li>
+            <li>In July 2026 a federal jury also convicted him of terrorism offences, including attempting to provide material support to Hezbollah. Sentencing in the federal case is scheduled for November 2026.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Writing on</summary>
+        <div class="body">
+          <ul class="points">
+            <li>His first fiction after the attack, <i>The Eleventh Hour</i> (November 2025), is a book of five linked stories and novellas set in India, England and the United States.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section id="works" style="--accent: var(--peacock)">
+      <header><h2>Works</h2></header>
+      <p class="lead-in">Selected novels, stories and non-fiction. The two seminar novels are highlighted.</p>
+      <ol class="timeline">
+        <li style="--c: var(--ink-soft)"><span class="y">1975</span><span><i>Grimus</i>, novel</span></li>
+        <li class="key" style="--c: var(--peacock)"><span class="y">1981</span><span><i>Midnight’s Children</i>, novel; Booker Prize</span></li>
+        <li class="key" style="--c: var(--rani)"><span class="y">1983</span><span><i>Shame</i>, novel; shortlisted for the Booker Prize</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">1987</span><span><i>The Jaguar Smile: A Nicaraguan Journey</i>, travel writing</span></li>
+        <li style="--c: var(--amber)"><span class="y">1988</span><span><i>The Satanic Verses</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">1990</span><span><i>Haroun and the Sea of Stories</i>, novel for his son</span></li>
+        <li style="--c: var(--violet)"><span class="y">1991</span><span><i>Imaginary Homelands</i>, essays 1981–91</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">1994</span><span><i>East, West</i>, stories</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">1995</span><span><i>The Moor’s Last Sigh</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">1999</span><span><i>The Ground Beneath Her Feet</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2001</span><span><i>Fury</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2005</span><span><i>Shalimar the Clown</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2008</span><span><i>The Enchantress of Florence</i>, novel</span></li>
+        <li style="--c: var(--amber)"><span class="y">2012</span><span><i>Joseph Anton</i>, memoir</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2015</span><span><i>Two Years Eight Months and Twenty-Eight Nights</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2017</span><span><i>The Golden House</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2019</span><span><i>Quichotte</i>, novel</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2023</span><span><i>Victory City</i>, novel</span></li>
+        <li style="--c: var(--rani)"><span class="y">2024</span><span><i>Knife</i>, memoir</span></li>
+        <li style="--c: var(--ink-soft)"><span class="y">2025</span><span><i>The Eleventh Hour</i>, stories and novellas</span></li>
+      </ol>
+    </section>
+
+    <section id="links" style="--accent: var(--amber)">
+      <header><h2>Further links</h2></header>
+      <ul class="links">
+        <li><a href="https://www.britannica.com/biography/Salman-Rushdie">Encyclopaedia Britannica: Salman Rushdie</a><span>Biography, works, the fatwa and the attack of 2022.</span></li>
+        <li><a href="https://thebookerprizes.com/the-booker-library/books/midnights-children">The Booker Prizes: <i>Midnight’s Children</i></a><span>The 1981 winner in the Booker library.</span></li>
+        <li><a href="https://www.theparisreview.org/interviews/5531/the-art-of-fiction-no-186-salman-rushdie">The Paris Review: The Art of Fiction No. 186</a><span>A long interview from 2005 about his life, his craft and the years in hiding.</span></li>
+        <li><a href="https://www.justice.gov/opa/pr/federal-jury-convicts-new-jersey-man-terrorism-offenses-relating-his-attempted-murder-salman">U.S. Department of Justice: verdict of July 2026</a><span>The press release on the federal terrorism conviction of the attacker.</span></li>
+      </ul>
+    </section>
+
+    <section id="quiz" style="--accent: var(--peacock)">
+      <header>
+        <h2>Quiz</h2>
+        <p style="margin: 0.5rem 0 0">Twelve questions on this page. Choose an answer to see straight away whether it is right.</p>
+      </header>
+      <div id="quiz-body"></div>
+      <noscript><p>The quiz needs JavaScript.</p></noscript>
+    </section>
+
+    <p class="home"><a href="index.html">Back to the seminar overview</a></p>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="band"></div>
+  <div class="wrap inner">
+    <div>
+      <div class="who">Prof. Dr. Stefan Horlacher</div>
+      <p>TU Dresden <span class="term">Wintersemester 2026/27</span></p>
+      <p class="seminar">Hauptseminar “Born at Midnight, Born in Shame: The Traumatic Birth of India and Pakistan in Salman Rushdie’s Fiction”</p>
+    </div>
+    <div class="tu-logo"><img src="tud-logo-mark.png" alt="" width="80" height="80"><span>Technische<br>Universität<br>Dresden</span></div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Quiz ----------
+   To edit: change the entries below. "a" lists the options, the FIRST one is the correct answer
+   (the options are shuffled when the page loads). "why" is shown after answering. */
+var QUESTIONS = [
+  { q: "When and where was Salman Rushdie born?",
+    a: ["19 June 1947 in Bombay", "15 August 1947 in Delhi", "1947 in Karachi", "1950 in London"],
+    why: "He was born in Bombay about eight weeks before independence, so he belongs to the generation of “midnight’s children” himself." },
+  { q: "Where did Rushdie’s parents move in 1964?",
+    a: ["To Karachi", "To London", "To Kashmir", "To New York"],
+    why: "His parents left Bombay for Pakistan, the country Rushdie later wrote about in Shame." },
+  { q: "What did Rushdie study at King’s College, Cambridge?",
+    a: ["History", "Law", "English literature", "Oriental languages"],
+    why: "He read history and graduated in 1968." },
+  { q: "Which distinction did Midnight’s Children receive in 1993?",
+    a: ["It was named the “Booker of Bookers”", "It won the Nobel Prize", "It was banned in India", "It won the Booker Prize for the first time"],
+    why: "In 1993 it was named the best of the first 25 Booker winners; in 2008 it also won the public vote for the “Best of the Booker”." },
+  { q: "What does the narrator of Shame mean when he calls himself “a translated man”?",
+    a: ["That he has been “borne across” from one culture to another", "That his books have been translated into many languages", "That he works as an interpreter", "That he has changed his name"],
+    why: "He plays on the Latin root of “translation”, translatus: carried across." },
+  { q: "In which essay does Rushdie speak of “imaginary homelands, Indias of the mind”?",
+    a: ["“Imaginary Homelands”", "“The Satanic Verses”", "“Joseph Anton”", "“Knife”"],
+    why: "The essay of 1982 gave its title to Rushdie’s collection of essays published in 1991." },
+  { q: "What is “chutnification” in Midnight’s Children?",
+    a: ["Saleem’s image for preserving history like pickles: selected, seasoned, distorted", "A Bombay dialect of English", "A dish served at Saleem’s birth", "A political campaign of the Emergency"],
+    why: "Saleem works in a pickle factory and calls his story the “chutnification of history”." },
+  { q: "Who issued the fatwa against Rushdie on 14 February 1989?",
+    a: ["Ayatollah Khomeini", "Zia-ul-Haq", "The Pakistani parliament", "The government of India"],
+    why: "Iran’s supreme leader called on Muslims to kill the author of The Satanic Verses and everyone involved in publishing it." },
+  { q: "Where does the alias “Joseph Anton” come from?",
+    a: ["From the writers Joseph Conrad and Anton Chekhov", "From two of Rushdie’s bodyguards", "From characters in The Satanic Verses", "From his grandfathers"],
+    why: "Rushdie used the alias in hiding and later gave it to his memoir of those years (2012)." },
+  { q: "What happened to the Japanese translator of The Satanic Verses in 1991?",
+    a: ["Hitoshi Igarashi was murdered", "He refused to finish the translation", "He was knighted", "He went into hiding with Rushdie"],
+    why: "In the same year the Italian translator was stabbed; in 1993 the Norwegian publisher was shot." },
+  { q: "What were the lasting physical consequences of the attack of 12 August 2022?",
+    a: ["Rushdie lost the sight of his right eye", "He lost his hearing", "He could no longer speak", "There were none"],
+    why: "He was stabbed many times at the Chautauqua Institution and survived with severe injuries." },
+  { q: "What is the title of Rushdie’s 2024 book about the attack?",
+    a: ["Knife", "Joseph Anton", "Victory City", "The Eleventh Hour"],
+    why: "Knife: Meditations After an Attempted Murder appeared in April 2024." }
+];
+
+(function () {
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  /* ---------- Tabs ---------- */
+  var tabLinks = Array.prototype.slice.call(document.querySelectorAll(".tabs a"));
+  var ids = tabLinks.map(function (a) { return a.getAttribute("href").slice(1); });
+  var layout = document.getElementById("top");
+
+  function show(id, scroll) {
+    if (ids.indexOf(id) === -1) id = ids[0];
+    ids.forEach(function (x, i) {
+      document.getElementById(x).classList.toggle("active", x === id);
+      if (x === id) tabLinks[i].setAttribute("aria-current", "true");
+      else tabLinks[i].removeAttribute("aria-current");
+    });
+    var current = tabLinks[ids.indexOf(id)];
+    if (current.scrollIntoView && window.matchMedia("(max-width: 60rem)").matches) {
+      current.scrollIntoView({ block: "nearest", inline: "center" });
+    }
+    if (history.replaceState) history.replaceState(null, "", "#" + id);
+    if (scroll) layout.scrollIntoView();
+  }
+
+  ids.forEach(function (id, i) {
+    var pager = el("div", "pager");
+    if (i > 0) {
+      var prev = el("button", "prev", "Back: " + tabLinks[i - 1].textContent);
+      prev.type = "button";
+      prev.addEventListener("click", function () { show(ids[i - 1], true); });
+      pager.appendChild(prev);
+    }
+    if (i < ids.length - 1) {
+      var next = el("button", "next", "Next: " + tabLinks[i + 1].textContent);
+      next.type = "button";
+      next.addEventListener("click", function () { show(ids[i + 1], true); });
+      pager.appendChild(next);
+    }
+    document.getElementById(id).appendChild(pager);
+  });
+
+  tabLinks.forEach(function (a, i) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      show(ids[i], window.matchMedia("(max-width: 60rem)").matches);
+    });
+  });
+  window.addEventListener("hashchange", function () { show(location.hash.slice(1), false); });
+
+  document.body.classList.add("tabbed");
+  show(location.hash.slice(1), false);
+
+  /* ---------- Cards that turn over ---------- */
+  document.querySelectorAll(".flip").forEach(function (card) {
+    card.setAttribute("aria-pressed", "false");
+    card.addEventListener("click", function () {
+      card.setAttribute("aria-pressed", card.getAttribute("aria-pressed") === "true" ? "false" : "true");
+    });
+  });
+
+  /* ---------- Quiz ---------- */
+  var body = document.getElementById("quiz-body");
+  var answered, correct;
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function build() {
+    answered = 0; correct = 0;
+    body.innerHTML = "";
+
+    var progress = el("div", "progress");
+    progress.setAttribute("aria-live", "polite");
+    var result = el("div", "result");
+    result.hidden = true;
+
+    function update() {
+      progress.textContent = answered + " of " + QUESTIONS.length + " answered, " + correct + " correct";
+      if (answered === QUESTIONS.length) {
+        progress.hidden = true;
+        var share = correct / QUESTIONS.length;
+        var verdict = share === 1 ? "Flawless. You are ready for the novels."
+          : share >= 0.75 ? "Well done. A second look at the questions you missed will close the gaps."
+          : share >= 0.5 ? "A solid start. Reread the sections behind the questions you missed and try again."
+          : "Worth another read. Go through the tabs once more and try again.";
+        result.innerHTML = "";
+        result.appendChild(el("div", "score", correct + " / " + QUESTIONS.length));
+        result.appendChild(el("p", "", verdict));
+        var again = el("button", "", "Start again");
+        again.type = "button";
+        again.addEventListener("click", function () { build(); layout.scrollIntoView(); });
+        result.appendChild(again);
+        result.hidden = false;
+      }
+    }
+
+    QUESTIONS.forEach(function (item, i) {
+      var fs = el("fieldset", "q");
+      var lg = el("legend");
+      lg.appendChild(el("span", "num", (i + 1) + ". "));
+      lg.appendChild(document.createTextNode(item.q));
+      fs.appendChild(lg);
+
+      var opts = el("div", "opts");
+      var why = el("p", "why", item.why);
+      why.hidden = true;
+      var right = item.a[0];
+
+      shuffle(item.a).forEach(function (text) {
+        var b = el("button", "", text);
+        b.type = "button";
+        b.addEventListener("click", function () {
+          var all = opts.querySelectorAll("button");
+          for (var k = 0; k < all.length; k++) {
+            all[k].disabled = true;
+            if (all[k].textContent === right) all[k].classList.add("right");
+          }
+          if (text === right) correct++; else b.classList.add("wrong");
+          answered++;
+          why.hidden = false;
+          update();
+        });
+        opts.appendChild(b);
+      });
+
+      fs.appendChild(opts);
+      fs.appendChild(why);
+      body.appendChild(fs);
+    });
+
+    body.appendChild(result);
+    body.appendChild(progress);
+    update();
+  }
+
+  build();
+})();
+</script>
+</body>
+</html>
